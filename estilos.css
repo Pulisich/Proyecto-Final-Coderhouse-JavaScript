@@ -2,7 +2,7 @@
     margin: 0;
     padding:0;
 }
-
+/*GRID*/
 .containerGrande{
     display: grid;
     height: 100vh;
@@ -20,6 +20,7 @@
     
 }
 
+/*NAV BAR*/
 nav{
     background-color: black;
     color: white;  
@@ -45,7 +46,7 @@ nav{
     text-decoration: none;
     color: white    ;
 }
-
+/*BANNER*/
 header{
     background-color: black;
     text-align: center;
@@ -55,7 +56,7 @@ header{
     grid-area: header;
     width: 100%;
 }
-
+/*SUBTITULO*/
 h2{
     background-color: black;
     text-align: center;
@@ -66,7 +67,7 @@ h2{
     width: 100%;
     text-transform: uppercase;
 }
-
+/*PRODUCTOS*/
 #productos1{
     grid-area: productos1;
     background-color: white;
@@ -182,25 +183,65 @@ h2{
     padding-top: 15px;
     padding-bottom: 10px;
 }
+
+/*FOOTER*/
 footer{
     background-color: seagreen;
     grid-area: footer;
+    height: 25%;
 }
 
 .listasFooter{
+    background-color: seagreen;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.listaImagen{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: space-between;
     list-style: none;
 }
+
+.listaContacto{
+    padding-right: 15%;
+    padding-top: 2%;
+}
+
+.listaContacto p{
+    font-size: 22px;
+}
+.listaContacto li{
+    list-style: none;
+    
+}
+.listaImagen{
+    background-color: seagreen;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    list-style: none;
+    padding-left: 15%;
+    padding-top: 10%;
+}
+
+.listaImagen img{
+    padding-left: 25px;
+}
+.firma{
+    padding-top: 0;
+    padding-left: 5%;
+    background-color: seagreen;
+    font-size: 25px;
+}
+
+.firma a{
+    background-color: steelblue;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+/*MEDIA QUERIES*/
 @media only screen and (max-width: 700px) {
     .containerGrande{
         grid-auto-columns: 1fr;
