@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.containerGrande{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    ". h2 ."
+    "productos1 . productos2"
+    "productos3 . productos4"
+    "productos5 . productos6"
+    "footer footer footer";
+    grid-row-gap: 0.5rem;
+    
+}
+
+nav{
+    background-color: black;
+    color: white;  
+    grid-area: nav; 
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.uListaNav{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    padding-top: 10px;
+    list-style: none;
+
+}
+
+.uListaNav li a{
+    text-decoration: none;
+    color: white    ;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    color: blanchedalmond;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-area: header;
+    width: 100%;
+}
+
+h2{
+    background-color: black;
+    text-align: center;
+    color: blanchedalmond;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-area: h2;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#productos1{
+    grid-area: productos1;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+
+.sorrento{
+    display: block;
+    width: 80%;
+    height: auto;
+    border-radius: 6mm;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    right: 0;
+    height: auto;
+    width: 80%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.322);
+    color: blanchedalmond;
+    align-content: center;
+    border-radius: 6mm;
+  }
+  
+  #productos1:hover .overlay {
+    opacity: 1;
+  }
+
+#productos2{
+    background-color: green;
+    grid-area: productos2;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+#productos2:hover .overlay {
+    opacity: 1;
+  }
+
+#productos3{
+    background-color: indianred;
+    grid-area: productos3;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+#productos3:hover .overlay {
+    opacity: 1;
+  }
+#productos4{
+    background-color: blue;
+    grid-area: productos4;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+#productos4:hover .overlay {
+    opacity: 1;
+  }
+#productos5{
+    background-color: chocolate;
+    grid-area: productos5;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+#productos5:hover .overlay {
+    opacity: 1;
+  }
+#productos6{
+    background-color: red;
+    grid-area: productos6;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center ;
+    position: relative;
+}
+#productos6:hover .overlay {
+    opacity: 1;
+  }
+.uListaProd{
+    padding-top: 10%;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    
+
+}
+
+.uListaProd li{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+footer{
+    background-color: seagreen;
+    grid-area: footer;
+}
+
+.listasFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.listaImagen{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-between;
+    list-style: none;
+}
+@media only screen and (max-width: 700px) {
+    .containerGrande{
+        grid-auto-columns: 1fr;
+        grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+        grid-template-areas: "nav"
+        "header"
+        "h2"
+        "productos1"
+        "productos2"
+        "productos3"
+        "productos4"
+        "productos5"
+        "productos6"
+        "footer";
+    }
+}
+
+/*@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .containerGrande{
+        grid-auto-columns: 1fr;
+        grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+        grid-template-areas: "nav"
+        "header"
+        "h2"
+        "productos1"
+        "productos2"
+        "productos3"
+        "productos4"
+        "productos5"
+        "productos6"
+        "footer";
+    } 
+} */
