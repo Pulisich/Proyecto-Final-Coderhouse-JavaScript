@@ -68,6 +68,15 @@ h2{
     width: 100%;
     text-transform: uppercase;
 }
+
+
+/*CARRO*/
+.oculto{
+    display: none;
+}
+.visible{
+    display: block;
+}
 /*PRODUCTOS*/
 #productos1{
     grid-area: productos1;
@@ -89,23 +98,32 @@ h2{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 10%;
+    left:   5%;
     right: 0;
+    width: 80% !important;
+    height: 100% !important;
+    z-index: 10;
     height: auto;
-    width: 80%;
+    
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, 0.521);
-    color: blanchedalmond;
+    color: greenyellow;
+    
     text-align: center;
     border-radius: 6mm;
   }
+
+ 
   .overlay ul{
       padding-top: 10%;
+      text-decoration: none;
+      
   }
 
   .overlay ul li{
-      font-size: 25px;
+      font-size: 1.2rem;
+      text-decoration: none;
   }
   #productos1:hover .overlay {
     opacity: 1;
@@ -238,33 +256,20 @@ footer{
 /*MEDIA QUERIES*/
 
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     
-    .containerGrande{
-        grid-auto-columns: 1fr;
-        grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
-        grid-template-areas: "nav"
-        "header"
-        "h2"
-        "productos1"
-        "productos2"
-        "productos3"
-        "productos4"
-        "productos5"
-        "productos6"
-        "footer";
-    }
+   
     .overlay ul{
         padding-top: 10%;
     }
   
     .overlay ul li{
-        font-size: 15px;
+        font-size: 0.2em;
     }
     
 }
 
-@media only screen and (max-width: 375px) {
+/*@media only screen and (max-width: 375px) {
     .containerGrande{
         grid-auto-columns: 1fr;
         grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
